@@ -1,0 +1,22 @@
+{
+  "name": "it-nrf24-light-gui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "single-instance": false,
+  "window": {
+    "width": 1280,
+    "height": 768
+  },
+  "dependencies": {
+    "IT_NODE": "shycherry/IT_NODE#wip",
+    "nw": "^0.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nw"
+  },
+  "author": "",
+  "license": "ISC"
+}

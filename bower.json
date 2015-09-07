@@ -1,0 +1,20 @@
+{
+  "name": "doyouwant",
+  "version": "0.0.0",
+  "homepage": "https://github.com/shycherry/doyouwant",
+  "authors": [
+    "shycherry <vinpowful@free.fr>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "0.5",
+    "shy-elt-colorpicker": "shycherry/shy-elt-colorpicker"
+  }
+}
