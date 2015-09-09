@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "0.5",
-    "shy-elt-colorpicker": "shycherry/shy-elt-colorpicker"
+    "polymer": "~1.1.3",
+    "shy-elt-colorpicker": "shycherry/shy-elt-colorpicker#polymer-v1"
   }
 }
