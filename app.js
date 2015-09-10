@@ -4,14 +4,32 @@ var itNode = new ITNode();
 var myport = itNode.port;
 
 var sendPromise = Promise.resolve();
+
 var colorpicker = document.querySelector("#colorpicker");
-colorpicker.addEventListener("click", function(){
+var sliderRGB = document.querySelector("#sliderRGB");
+var sliderCW = document.querySelector("#sliderCW");
+var sliderWW = document.querySelector("#sliderWW");
+
+function sendUserData(){
   var rgb = colorpicker.getSelectedRGB();
+  var rgbPOW = sliderRGB.immediateValue;
+  var cwPOW = sliderCW.immediateValue;
+  var wwPOW = sliderWW.immediateValue;
+
+  var rPOW = Math.round((rgbPOW / 255) * rgb.r);
+  var gPOW = Math.round((rgbPOW / 255) * rgb.g);
+  var bPOW = Math.round((rgbPOW / 255) * rgb.b);
+
   sendPromise = sendPromise.then(function(){
-    return connectSendData(rgb.r, rgb.g, rgb.b, 255, 255);
+    return connectSendData(rPOW, gPOW, bPOW, cwPOW, wwPOW);
   });
   return sendPromise;
-});
+}
+
+colorpicker.addEventListener("click", sendUserData);
+sliderRGB.addEventListener("value-change", sendUserData);
+sliderCW.addEventListener("value-change", sendUserData);
+sliderWW.addEventListener("value-change", sendUserData);
 
 function connectSendData(r,g,b,cw,ww){
 

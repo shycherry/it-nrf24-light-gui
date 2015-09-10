@@ -6,17 +6,25 @@
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" href="bower_components/shy-elt-colorpicker/shy-elt-colorpicker.html">
-    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
-    <style>
-      #colorpicker {
-        width: 100%;
-        height: 100%;
-      }
-    </style>
+    <link rel="import" href="bower_components/paper-styles/paper-styles.html">
+    <link rel="import" href="bower_components/paper-slider/paper-slider.html">
   </head>
 
-  <body>
-    <shy-elt-colorpicker id="colorpicker"></shy-elt-colorpicker>
+  <body class="fullbleed" unresolved>
+    <div class="vertical center-justified center layout fit">
+      <div class="horizontal center layout">
+        <shy-elt-colorpicker id="colorpicker"></shy-elt-colorpicker>
+      </div>
+      <div class="horizontal center layout">
+        <div>RGB</div><paper-slider id="sliderRGB" min="0" max="255" value="255" editable></paper-slider>
+      </div>
+      <div class="horizontal center layout">
+        <div>CW</div><paper-slider id="sliderCW" min="0" max="255" value="255" editable></paper-slider>
+      </div>
+      <div class="horizontal center layout">
+        <div>WW</div><paper-slider id="sliderWW" min="0" max="255" value="255" editable></paper-slider>
+      </div>
+    </div>
     <script src="app.js"></script>
   </body>
 
