@@ -35,8 +35,8 @@ function connectSendData(r,g,b,cw,ww){
 
   data = new Buffer(5);
   data.writeUInt8(b,0);
-  data.writeUInt8(g,1);
-  data.writeUInt8(r,2);
+  data.writeUInt8(r,1);
+  data.writeUInt8(g,2);
   data.writeUInt8(ww,3);
   data.writeUInt8(cw,4);
 
